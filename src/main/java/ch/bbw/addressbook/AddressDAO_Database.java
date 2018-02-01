@@ -10,12 +10,10 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import javax.faces.bean.ApplicationScoped;
-import javax.inject.Named;
 
-@Named("AddressDAO")
-@ApplicationScoped
-public class AddressDAO_Database implements AddressDAO {
+//@Named("AddressDAO_DB")
+//@ApplicationScoped
+public class AddressDAO_Database /*implements AddressDAO*/ {
 	
 	private Connection connection; // TODO: to be replaced by connection pool
 	
@@ -74,7 +72,7 @@ public class AddressDAO_Database implements AddressDAO {
 				list.add(new Address(
 						entries.getInt("id"), entries.getString("firstname"), 
 						entries.getString("lastname"), entries.getString("phonenumber"),
-						entries.getDate("registrationDate")));
+						entries.getString("village"), entries.getDate("registrationDate")));
 			}
 			entries.close();
 			stmt.close();
