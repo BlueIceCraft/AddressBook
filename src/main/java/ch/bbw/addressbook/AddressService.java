@@ -12,7 +12,7 @@ import javax.inject.Named;
 public class AddressService {
 	
 	@Inject
-	@Named("AddressDAO")
+	@Named("AddressDAO_Memory")
 	private AddressDAO addressDAO;
 	
 	
@@ -28,7 +28,6 @@ public class AddressService {
 //		});
 		
 		addresses.sort(new LastnameFirstnameRegistrationDatecomparator());
-		
 		return addresses;
 	}
 	
