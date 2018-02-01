@@ -56,7 +56,7 @@ public class TestService {
 		countBefore = addressService.getAllAddresses().size();
 		
 		Date dateNow = new Date();
-		Address newAddress = new Address(4711, "James", "Madoon", "0000000000");
+		Address newAddress = new Address(4711, "James", "Madoon", "0000000000", "TestDorf");
 		addressService.registerAddress(newAddress);
 
 		countAfter = addressService.getAllAddresses().size();

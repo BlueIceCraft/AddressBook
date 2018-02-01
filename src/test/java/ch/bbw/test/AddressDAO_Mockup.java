@@ -14,10 +14,10 @@ public class AddressDAO_Mockup implements AddressDAO {
 	
 	public AddressDAO_Mockup() {		
 		addresses = new ArrayList<>();
-		addresses.add(new Address(1, "Petra", "Muster", "000 0000 0000", new Date()));
-		addresses.add(new Address(2, "Peter", "Muster", "000 0000 0000", new Date()));
-		addresses.add(new Address(3, "Fritz", "Müller", "000 0000 0000", new Date()));
-		addresses.add(new Address(4, "Dario", "Andres", "000 0000 0000", new Date()));	
+		addresses.add(new Address(1, "Petra", "Muster", "000 0000 0000", "TestDorf", new Date()));
+		addresses.add(new Address(2, "Peter", "Muster", "000 0000 0000", "TestDorf", new Date()));
+		addresses.add(new Address(3, "Fritz", "Müller", "000 0000 0000", "TestDorf", new Date()));
+		addresses.add(new Address(4, "Dario", "Andres", "000 0000 0000", "TestDorf", new Date()));
 	}
 	
 	// CRUD Commands: Create Read Update Delete
