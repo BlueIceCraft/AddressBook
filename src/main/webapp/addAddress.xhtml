@@ -2,7 +2,8 @@
 <ui:composition template="WEB-INF/template.xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:ui="http://java.sun.com/jsf/facelets">
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
     
     <ui:define name="title">Address Book</ui:define>
 
@@ -23,6 +24,10 @@
 	            	<div class="form-group">
 	                	<label>Phone number:</label>
 		                <h:inputText value="#{addressViewController.phoneNumber}" class="form-control"/>
+	                </div>
+	                <div class="form-group">
+	                	<label>Village:</label>
+		                <p:autoComplete  value="#{addressViewController.village}" completeMethod="#{addressViewController.completeText}" />
 	                </div>
 	                <ui:fragment rendered="#{addressViewController.message.length()>0}">
 		                <div class="alert alert-info">
